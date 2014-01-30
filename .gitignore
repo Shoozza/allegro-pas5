@@ -1,0 +1,6 @@
+*.o
+*.a
+*.ppu
+examples/*
+!examples/*.pas
+!examples/data/*
