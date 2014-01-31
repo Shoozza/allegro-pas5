@@ -33,6 +33,7 @@ INTERFACE
 
   (* Defines some constants with the names of the library files. *)
   CONST
+    ALLEGRO_VERSION = '5.0.10';
 {$IFDEF DEBUGMODE}
     { @exclude }
     _DBG_ = '-debug';
@@ -66,7 +67,7 @@ INTERFACE
   {$IFDEF MONOLITH}
   {It uses monolith staticaly linked version. }
     { @exclude }
-    ALLEGRO_LIB_NAME            = 'allegro-5.0.5-monolith-mt'+_DBG_+'.dll';
+    ALLEGRO_LIB_NAME            = 'allegro-'+ALLEGRO_VERSION+'-monolith-mt'+_DBG_+'.dll';
     { @exclude }
     ALLEGRO_ACODEC_LIB_NAME     = ALLEGRO_LIB_NAME;
     { @exclude }
@@ -88,25 +89,25 @@ INTERFACE
   {$ELSE}
   {It uses add-ons }
     { @exclude }
-    ALLEGRO_LIB_NAME            = 'allegro'+_DBG_+'.5.0.dll';
+    ALLEGRO_LIB_NAME            = 'allegro'+_DBG_+'.'+ALLEGRO_VERSON+'.dll';
     { @exclude }
-    ALLEGRO_ACODEC_LIB_NAME     = 'allegro_acodec'+_DBG_+'.5.0.dll';
+    ALLEGRO_ACODEC_LIB_NAME     = 'allegro_acodec'+_DBG_+'.'+ALLEGRO_VERSON+'.dll';
     { @exclude }
-    ALLEGRO_AUDIO_LIB_NAME      = 'allegro_audio'+_DBG_+'.5.0.dll';
+    ALLEGRO_AUDIO_LIB_NAME      = 'allegro_audio'+_DBG_+'.'+ALLEGRO_VERSON+'.dll';
     { @exclude }
-    ALLEGRO_COLOR_LIB_NAME      = 'allegro_color'+_DBG_+'.5.0.dll';
+    ALLEGRO_COLOR_LIB_NAME      = 'allegro_color'+_DBG_+'.'+ALLEGRO_VERSON+'.dll';
     { @exclude }
-    ALLEGRO_FONT_LIB_NAME       = 'allegro_font'+_DBG_+'.5.0.dll';
+    ALLEGRO_FONT_LIB_NAME       = 'allegro_font'+_DBG_+'.'+ALLEGRO_VERSON+'.dll';
     { @exclude }
-    ALLEGRO_IMAGE_LIB_NAME      = 'allegro_image'+_DBG_+'.5.0.dll';
+    ALLEGRO_IMAGE_LIB_NAME      = 'allegro_image'+_DBG_+'.'+ALLEGRO_VERSON+'.dll';
     { @exclude }
-    ALLEGRO_MAIN_LIB_NAME       = 'allegro_main'+_DBG_+'.5.0.dll';
+    ALLEGRO_MAIN_LIB_NAME       = 'allegro_main'+_DBG_+'.'+ALLEGRO_VERSON+'.dll';
     { @exclude }
-    ALLEGRO_NATIVE_DLG_LIB_NAME = 'allegro_dialog'+_DBG_+'.5.0.dll';
+    ALLEGRO_NATIVE_DLG_LIB_NAME = 'allegro_dialog'+_DBG_+'.'+ALLEGRO_VERSON+'.dll';
     { @exclude }
-    ALLEGRO_PRIMITIVES_LIB_NAME = 'allegro_primitives'+_DBG_+'.5.0.dll';
+    ALLEGRO_PRIMITIVES_LIB_NAME = 'allegro_primitives'+_DBG_+'.'+ALLEGRO_VERSON+'.dll';
     { @exclude }
-    ALLEGRO_TTF_LIB_NAME        = 'allegro_primitives'+_DBG_+'.5.0.dll';
+    ALLEGRO_TTF_LIB_NAME        = 'allegro_primitives'+_DBG_+'.'+ALLEGRO_VERSON+'.dll';
   {$ENDIF}
 {$ENDIF}
 
