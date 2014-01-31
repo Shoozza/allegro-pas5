@@ -109,7 +109,7 @@ INTERFACE
     { @exclude }
     ALLEGRO_TTF_LIB_NAME        = 'allegro_primitives'+_DBG_+'.'+ALLEGRO_VERSON+'.dll';
   {$ENDIF}
-{$ENDIF}
+{$IFEND}
 
 
 
@@ -139,7 +139,9 @@ INTERFACE
   (* Signed 64bit integer values. *)
     AL_INT64 = INT64;
   (* Unsigned 64bit integer values. *)
+{$IFDEF FPC}
     AL_UINT64 = QWORD;
+{$ENDIF}
 
 
 
