@@ -41,8 +41,8 @@ INTERFACE
     EXTERNAL ALLEGRO_COLOR_LIB_NAME;
   PROCEDURE al_color_hsl_to_rgb (h, s, l: AL_FLOAT; VAR r, g, b: AL_FLOAT); CDECL;
     EXTERNAL ALLEGRO_COLOR_LIB_NAME;
-  FUNCTION al_color_name_to_rgb (CONST name: STRING; VAR r, g, b: AL_FLOAT): AL_BOOL; INLINE;
-  FUNCTION al_color_rgb_to_name (r, g, b: AL_FLOAT): STRING; INLINE;
+  FUNCTION al_color_name_to_rgb (CONST name: STRING; VAR r, g, b: AL_FLOAT): AL_BOOL; {$IFDEF FPC}INLINE;{$ENDIF}
+  FUNCTION al_color_rgb_to_name (r, g, b: AL_FLOAT): STRING; {$IFDEF FPC}INLINE;{$ENDIF}
   PROCEDURE al_color_cmyk_to_rgb (c, m, y, k: AL_FLOAT; VAR r, g, b: AL_FLOAT); CDECL;
     EXTERNAL ALLEGRO_COLOR_LIB_NAME;
   PROCEDURE al_color_rgb_to_cmyk (r, g, b: AL_FLOAT; VAR c, m, y, k: AL_FLOAT); CDECL;
@@ -51,8 +51,8 @@ INTERFACE
     EXTERNAL ALLEGRO_COLOR_LIB_NAME;
   PROCEDURE al_color_rgb_to_yuv (r, g, b: AL_FLOAT; VAR y, u, v: AL_FLOAT); CDECL;
     EXTERNAL ALLEGRO_COLOR_LIB_NAME;
-  PROCEDURE al_color_rgb_to_html (r, g, b: AL_FLOAT; VAR str: STRING); INLINE;
-  PROCEDURE al_color_html_to_rgb (CONST str: STRING; VAR r, g, b: AL_FLOAT); INLINE;
+  PROCEDURE al_color_rgb_to_html (r, g, b: AL_FLOAT; VAR str: STRING); {$IFDEF FPC}INLINE;{$ENDIF}
+  PROCEDURE al_color_html_to_rgb (CONST str: STRING; VAR r, g, b: AL_FLOAT); {$IFDEF FPC}INLINE;{$ENDIF}
   FUNCTION al_color_yuv (y, u, v: AL_FLOAT): ALLEGRO_COLOR; CDECL;
     EXTERNAL ALLEGRO_COLOR_LIB_NAME;
   FUNCTION al_color_cmyk (c, m, y, k: AL_FLOAT): ALLEGRO_COLOR; CDECL;
@@ -61,8 +61,8 @@ INTERFACE
     EXTERNAL ALLEGRO_COLOR_LIB_NAME;
   FUNCTION al_color_hsv (h, s, v: AL_FLOAT): ALLEGRO_COLOR; CDECL;
     EXTERNAL ALLEGRO_COLOR_LIB_NAME;
-  FUNCTION al_color_name (CONST name: STRING): ALLEGRO_COLOR; INLINE;
-  FUNCTION al_color_html (CONST str: STRING): ALLEGRO_COLOR; INLINE;
+  FUNCTION al_color_name (CONST name: STRING): ALLEGRO_COLOR; {$IFDEF FPC}INLINE;{$ENDIF}
+  FUNCTION al_color_html (CONST str: STRING): ALLEGRO_COLOR; {$IFDEF FPC}INLINE;{$ENDIF}
 
 IMPLEMENTATION
 

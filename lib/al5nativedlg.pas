@@ -34,21 +34,21 @@ INTERFACE
 
 
 
-  FUNCTION al_create_native_file_dialog (CONST initial_path, title, patterns: STRING; Mode: AL_INT): ALLEGRO_FILECHOOSERptr; INLINE;
+  FUNCTION al_create_native_file_dialog (CONST initial_path, title, patterns: STRING; Mode: AL_INT): ALLEGRO_FILECHOOSERptr; {$IFDEF FPC}INLINE;{$ENDIF}
   FUNCTION al_show_native_file_dialog (display: ALLEGRO_DISPLAYptr; dialog: ALLEGRO_FILECHOOSERptr): AL_BOOL; CDECL;
     EXTERNAL ALLEGRO_NATIVE_DLG_LIB_NAME;
   FUNCTION al_get_native_file_dialog_count (CONST dialog: ALLEGRO_FILECHOOSERptr): AL_INT; CDECL;
     EXTERNAL ALLEGRO_NATIVE_DLG_LIB_NAME;
-  FUNCTION al_get_native_file_dialog_path (CONST dialog: ALLEGRO_FILECHOOSERptr; index: AL_SIZE_T): STRING; INLINE;
+  FUNCTION al_get_native_file_dialog_path (CONST dialog: ALLEGRO_FILECHOOSERptr; index: AL_SIZE_T): STRING; {$IFDEF FPC}INLINE;{$ENDIF}
   PROCEDURE al_destroy_native_file_dialog (dialog: ALLEGRO_FILECHOOSERptr); CDECL;
     EXTERNAL ALLEGRO_NATIVE_DLG_LIB_NAME;
 
-  FUNCTION al_show_native_message_box (display: ALLEGRO_DISPLAYptr; CONST title, heading, str, buttons: STRING; flags: AL_INT): AL_INT; INLINE;
+  FUNCTION al_show_native_message_box (display: ALLEGRO_DISPLAYptr; CONST title, heading, str, buttons: STRING; flags: AL_INT): AL_INT; {$IFDEF FPC}INLINE;{$ENDIF}
 
-  FUNCTION al_open_native_text_log (CONST title: STRING; flags: AL_INT): ALLEGRO_TEXTLOGptr; INLINE;
+  FUNCTION al_open_native_text_log (CONST title: STRING; flags: AL_INT): ALLEGRO_TEXTLOGptr; {$IFDEF FPC}INLINE;{$ENDIF}
   PROCEDURE al_close_native_text_log (textlog: ALLEGRO_TEXTLOGptr); CDECL;
     EXTERNAL ALLEGRO_NATIVE_DLG_LIB_NAME;
-  PROCEDURE al_append_native_text_log (textlog: ALLEGRO_TEXTLOGptr; CONST str: STRING); INLINE;
+  PROCEDURE al_append_native_text_log (textlog: ALLEGRO_TEXTLOGptr; CONST str: STRING); {$IFDEF FPC}INLINE;{$ENDIF}
   FUNCTION al_get_native_text_log_event_source (textlog: ALLEGRO_TEXTLOGptr): ALLEGRO_EVENT_SOURCEptr; CDECL;
     EXTERNAL ALLEGRO_NATIVE_DLG_LIB_NAME;
 

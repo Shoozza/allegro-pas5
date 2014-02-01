@@ -54,20 +54,20 @@ INTERFACE
     ALLEGRO_ALIGN_RIGHT   = 2;
     ALLEGRO_ALIGN_INTEGER = 1;
 
-  FUNCTION al_register_font_loader (CONST ext: STRING; load: FONT_LOADER_FUNCTION): AL_BOOL; INLINE;
-  FUNCTION al_load_bitmap_font (CONST filename: STRING): ALLEGRO_FONTptr; INLINE;
-  FUNCTION al_load_font (CONST filename: STRING; size, flags: AL_INT): ALLEGRO_FONTptr; INLINE;
+  FUNCTION al_register_font_loader (CONST ext: STRING; load: FONT_LOADER_FUNCTION): AL_BOOL; {$IFDEF FPC}INLINE;{$ENDIF}
+  FUNCTION al_load_bitmap_font (CONST filename: STRING): ALLEGRO_FONTptr; {$IFDEF FPC}INLINE;{$ENDIF}
+  FUNCTION al_load_font (CONST filename: STRING; size, flags: AL_INT): ALLEGRO_FONTptr; {$IFDEF FPC}INLINE;{$ENDIF}
 
   FUNCTION al_grab_font_from_bitmap (bmp: ALLEGRO_BITMAPptr; n: AL_INT; ranges: ARRAY OF AL_INT): ALLEGRO_FONTptr;
 
   PROCEDURE al_draw_ustr (CONST font: ALLEGRO_FONTptr; color: ALLEGRO_COLOR; x, y: AL_FLOAT; flags: AL_INT; CONST ustr: ALLEGRO_USTRptr); CDECL;
     EXTERNAL ALLEGRO_FONT_LIB_NAME;
-  PROCEDURE al_draw_text (CONST font: ALLEGRO_FONTptr; color: ALLEGRO_COLOR; x, y: AL_FLOAT; flags: AL_INT; CONST str: STRING); INLINE;
-  PROCEDURE al_draw_justified_text (CONST font: ALLEGRO_FONTptr; color: ALLEGRO_COLOR; x1, x2, y, diff: AL_FLOAT; flags: AL_INT; CONST str: STRING); INLINE;
+  PROCEDURE al_draw_text (CONST font: ALLEGRO_FONTptr; color: ALLEGRO_COLOR; x, y: AL_FLOAT; flags: AL_INT; CONST str: STRING); {$IFDEF FPC}INLINE;{$ENDIF}
+  PROCEDURE al_draw_justified_text (CONST font: ALLEGRO_FONTptr; color: ALLEGRO_COLOR; x1, x2, y, diff: AL_FLOAT; flags: AL_INT; CONST str: STRING); {$IFDEF FPC}INLINE;{$ENDIF}
   PROCEDURE al_draw_justified_ustr (CONST font: ALLEGRO_FONTptr; color: ALLEGRO_COLOR; x1, x2, y, diff: SINGLE; flags: LONGINT; CONST str: ALLEGRO_USTRptr); CDECL;
     EXTERNAL ALLEGRO_FONT_LIB_NAME;
 { No "format" procedures.  Use Pascal's Format function defined at sysutils unit instead. }
-  FUNCTION al_get_text_width (CONST font: ALLEGRO_FONTptr; CONST str: STRING): AL_INT; INLINE;
+  FUNCTION al_get_text_width (CONST font: ALLEGRO_FONTptr; CONST str: STRING): AL_INT; {$IFDEF FPC}INLINE;{$ENDIF}
   FUNCTION al_get_ustr_width (CONST font: ALLEGRO_FONTptr; CONST ustr: ALLEGRO_USTRptr): AL_INT; CDECL;
     EXTERNAL ALLEGRO_FONT_LIB_NAME;
   FUNCTION al_get_font_line_height (CONST font: ALLEGRO_FONTptr): AL_INT; CDECL;
@@ -80,7 +80,7 @@ INTERFACE
     EXTERNAL ALLEGRO_FONT_LIB_NAME;
   PROCEDURE al_get_ustr_dimensions (CONST f: ALLEGRO_FONTptr; CONST str: ALLEGRO_USTRptr; VAR bbx, bby, bbw, bbh: AL_INT); CDECL;
     EXTERNAL ALLEGRO_FONT_LIB_NAME;
-  PROCEDURE al_get_text_dimensions (CONST f: ALLEGRO_FONTptr; CONST str: STRING; VAR bbx, bby, bbw, bbh: AL_INT); INLINE;
+  PROCEDURE al_get_text_dimensions (CONST f: ALLEGRO_FONTptr; CONST str: STRING; VAR bbx, bby, bbw, bbh: AL_INT); {$IFDEF FPC}INLINE;{$ENDIF}
   PROCEDURE al_init_font_addon; CDECL;
     EXTERNAL ALLEGRO_FONT_LIB_NAME;
   PROCEDURE al_shutdown_font_addon; CDECL;
