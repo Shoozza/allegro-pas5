@@ -1,6 +1,7 @@
 *.o
 *.a
 *.ppu
+*.bak
 examples/*
 !examples/*.pas
 !examples/data/*
