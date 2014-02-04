@@ -139,9 +139,7 @@ INTERFACE
   (* Signed 64bit integer values. *)
     AL_INT64 = INT64;
   (* Unsigned 64bit integer values. *)
-{$IFDEF FPC}
-    AL_UINT64 = QWORD;
-{$ENDIF}
+    AL_UINT64 = {$IFDEF FPC}QWORD{$ELSE}{$IFDEF ISDELPHI2007ANDUP}UInt64{$ELSE}Int64{$ENDIF}{$ENDIF};
 
 
 
