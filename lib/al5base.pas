@@ -63,7 +63,7 @@ INTERFACE
     ALLEGRO_PRIMITIVES_LIB_NAME = 'liballegro_primitives'+_DBG_+'.so.5.0';
     { @exclude }
     ALLEGRO_TTF_LIB_NAME        = 'liballegro_ttf'+_DBG_+'.so.5.0';
-{$ELSEIF DEFINED(WINDOWS)}
+{$ELSEIF DEFINED(MSWINDOWS)}
   {$IFDEF MONOLITH}
   {It uses monolith staticaly linked version. }
     { @exclude }
