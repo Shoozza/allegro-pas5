@@ -44,25 +44,27 @@ INTERFACE
 
 {$IF DEFINED(UNIX)}
     { @exclude }
-    ALLEGRO_LIB_NAME            = 'liballegro'+_DBG_+'.so.5.0';
+    ALLEGRO_LIB_NAME_SUFFIX     =  _DBG_+'.so.5.0';
     { @exclude }
-    ALLEGRO_ACODEC_LIB_NAME     = 'liballegro_acodec'+_DBG_+'.so.5.0';
+    ALLEGRO_LIB_NAME            = 'liballegro'+ALLEGRO_LIB_NAME_SUFFIX;
     { @exclude }
-    ALLEGRO_AUDIO_LIB_NAME      = 'liballegro_audio'+_DBG_+'.so.5.0';
+    ALLEGRO_ACODEC_LIB_NAME     = 'liballegro_acodec'+ALLEGRO_LIB_NAME_SUFFIX;
     { @exclude }
-    ALLEGRO_COLOR_LIB_NAME      = 'liballegro_color'+_DBG_+'.so.5.0';
+    ALLEGRO_AUDIO_LIB_NAME      = 'liballegro_audio'+ALLEGRO_LIB_NAME_SUFFIX;
     { @exclude }
-    ALLEGRO_FONT_LIB_NAME       = 'liballegro_font'+_DBG_+'.so.5.0';
+    ALLEGRO_COLOR_LIB_NAME      = 'liballegro_color'+ALLEGRO_LIB_NAME_SUFFIX;
     { @exclude }
-    ALLEGRO_IMAGE_LIB_NAME      = 'liballegro_image'+_DBG_+'.so.5.0';
+    ALLEGRO_FONT_LIB_NAME       = 'liballegro_font'+ALLEGRO_LIB_NAME_SUFFIX;
     { @exclude }
-    ALLEGRO_MAIN_LIB_NAME       = 'liballegro_main'+_DBG_+'.so.5.0';
+    ALLEGRO_IMAGE_LIB_NAME      = 'liballegro_image'+ALLEGRO_LIB_NAME_SUFFIX;
     { @exclude }
-    ALLEGRO_NATIVE_DLG_LIB_NAME = 'liballegro_dialog'+_DBG_+'.so.5.0';
+    ALLEGRO_MAIN_LIB_NAME       = 'liballegro_main'+ALLEGRO_LIB_NAME_SUFFIX;
     { @exclude }
-    ALLEGRO_PRIMITIVES_LIB_NAME = 'liballegro_primitives'+_DBG_+'.so.5.0';
+    ALLEGRO_NATIVE_DLG_LIB_NAME = 'liballegro_dialog'+ALLEGRO_LIB_NAME_SUFFIX;
     { @exclude }
-    ALLEGRO_TTF_LIB_NAME        = 'liballegro_ttf'+_DBG_+'.so.5.0';
+    ALLEGRO_PRIMITIVES_LIB_NAME = 'liballegro_primitives'+ALLEGRO_LIB_NAME_SUFFIX;
+    { @exclude }
+    ALLEGRO_TTF_LIB_NAME        = 'liballegro_ttf'+ALLEGRO_LIB_NAME_SUFFIX;
 {$ELSEIF DEFINED(MSWINDOWS)}
   {$IFDEF MONOLITH}
   {It uses monolith statically linked version. }
