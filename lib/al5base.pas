@@ -88,26 +88,27 @@ INTERFACE
     ALLEGRO_TTF_LIB_NAME        = ALLEGRO_LIB_NAME;
   {$ELSE}
   {It uses add-ons }
+    ALLEGRO_LIB_NAME_SUFFIX     = ALLEGRO_VERSION+'-mt'+_DBG_+'.dll';
     { @exclude }
-    ALLEGRO_LIB_NAME            = 'allegro'+_DBG_+'.'+ALLEGRO_VERSION+'.dll';
+    ALLEGRO_LIB_NAME            = 'allegro-'+ALLEGRO_LIB_NAME_SUFFIX;
     { @exclude }
-    ALLEGRO_ACODEC_LIB_NAME     = 'allegro_acodec'+_DBG_+'.'+ALLEGRO_VERSION+'.dll';
+    ALLEGRO_ACODEC_LIB_NAME     = 'allegro_acodec-'+ALLEGRO_LIB_NAME_SUFFIX;
     { @exclude }
-    ALLEGRO_AUDIO_LIB_NAME      = 'allegro_audio'+_DBG_+'.'+ALLEGRO_VERSION+'.dll';
+    ALLEGRO_AUDIO_LIB_NAME      = 'allegro_audio-'+ALLEGRO_LIB_NAME_SUFFIX;
     { @exclude }
-    ALLEGRO_COLOR_LIB_NAME      = 'allegro_color'+_DBG_+'.'+ALLEGRO_VERSION+'.dll';
+    ALLEGRO_COLOR_LIB_NAME      = 'allegro_color-'+ALLEGRO_LIB_NAME_SUFFIX;
     { @exclude }
-    ALLEGRO_FONT_LIB_NAME       = 'allegro_font'+_DBG_+'.'+ALLEGRO_VERSION+'.dll';
+    ALLEGRO_FONT_LIB_NAME       = 'allegro_font-'+ALLEGRO_LIB_NAME_SUFFIX;
     { @exclude }
-    ALLEGRO_IMAGE_LIB_NAME      = 'allegro_image'+_DBG_+'.'+ALLEGRO_VERSION+'.dll';
+    ALLEGRO_IMAGE_LIB_NAME      = 'allegro_image-'+ALLEGRO_LIB_NAME_SUFFIX;
     { @exclude }
-    ALLEGRO_MAIN_LIB_NAME       = 'allegro_main'+_DBG_+'.'+ALLEGRO_VERSION+'.dll';
+    ALLEGRO_MAIN_LIB_NAME       = 'allegro_main-'+ALLEGRO_LIB_NAME_SUFFIX;
     { @exclude }
-    ALLEGRO_NATIVE_DLG_LIB_NAME = 'allegro_dialog'+_DBG_+'.'+ALLEGRO_VERSION+'.dll';
+    ALLEGRO_NATIVE_DLG_LIB_NAME = 'allegro_dialog-'+ALLEGRO_LIB_NAME_SUFFIX;
     { @exclude }
-    ALLEGRO_PRIMITIVES_LIB_NAME = 'allegro_primitives'+_DBG_+'.'+ALLEGRO_VERSION+'.dll';
+    ALLEGRO_PRIMITIVES_LIB_NAME = 'allegro_primitives-'+ALLEGRO_LIB_NAME_SUFFIX;
     { @exclude }
-    ALLEGRO_TTF_LIB_NAME        = 'allegro_primitives'+_DBG_+'.'+ALLEGRO_VERSION+'.dll';
+    ALLEGRO_TTF_LIB_NAME        = 'allegro_primitives-'+ALLEGRO_LIB_NAME_SUFFIX;
   {$ENDIF}
 {$IFEND}
 
