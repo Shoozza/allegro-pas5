@@ -2,6 +2,7 @@
 *.a
 *.~*
 *.ppu
+*.dcu
 *.bak
 examples/*
 !examples/*.pas
