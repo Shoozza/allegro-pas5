@@ -276,7 +276,7 @@ PROGRAM ex_prim;
     END;
   END;
 
-(* 
+(*
 static void IndexedFilledPrimitives(Mode: TMODE)
 {
    static ALLEGRO_VERTEX vtx[21];
@@ -295,13 +295,13 @@ static void IndexedFilledPrimitives(Mode: TMODE)
             x = 200 * cosf((float)Ndx / 20 * 2 * ALLEGRO_PI);
             y = 200 * sinf((float)Ndx / 20 * 2 * ALLEGRO_PI);
          }
-         
+
          if (Ndx == 0) {
             x = y = 0;
          }
-         
+
          color = al_map_rgb((7 * Ndx + 1) % 3 * 64, (2 * Ndx + 2) % 3 * 64, (Ndx) % 3 * 64);
-         
+
          vtx[Ndx].x = x; vtx[Ndx].y = y; vtx[Ndx].z = 0;
          vtx[Ndx].color = color;
       }
@@ -314,20 +314,20 @@ static void IndexedFilledPrimitives(Mode: TMODE)
          if (Ndx > 0)
             indices3[Ndx] = ((int)al_get_time() + Ndx + 12) % 20 + 1;
       }
-      
+
       al_build_transform(&MainTrans, ScreenW / 2, ScreenH / 2, 1, 1, Theta);
    } else if (mode == DRAW) {
       if (Blend)
          al_set_blender(ALLEGRO_ADD, ALLEGRO_ONE, ALLEGRO_ONE);
       else
          al_set_blender(ALLEGRO_ADD, ALLEGRO_ONE, ALLEGRO_ZERO);
-      
+
       al_use_transform(&MainTrans);
-      
+
       al_draw_indexed_prim(vtx, 0, 0, indices1, 6, ALLEGRO_PRIM_TRIANGLE_LIST);
       al_draw_indexed_prim(vtx, 0, 0, indices2, 6, ALLEGRO_PRIM_TRIANGLE_STRIP);
       al_draw_indexed_prim(vtx, 0, 0, indices3, 6, ALLEGRO_PRIM_TRIANGLE_FAN);
-      
+
       al_use_transform(&Identity);
    }
 }
@@ -335,7 +335,7 @@ static void IndexedFilledPrimitives(Mode: TMODE)
 static void HighPrimitives(Mode: TMODE)
 {
    if (mode == INIT) {
-   
+
    } else if (mode == LOGIC) {
       Theta += Speed;
       al_build_transform(&MainTrans, ScreenW / 2, ScreenH / 2, 1, 1, Theta);
@@ -351,9 +351,9 @@ static void HighPrimitives(Mode: TMODE)
          al_set_blender(ALLEGRO_ADD, ALLEGRO_ONE, ALLEGRO_ONE);
       else
          al_set_blender(ALLEGRO_ADD, ALLEGRO_ONE, ALLEGRO_ZERO);
-      
+
       al_use_transform(&MainTrans);
-      
+
       al_draw_line(-300, -200, 300, 200, al_map_rgba_f(0, 0.5, 0.5, 1), Thickness);
       al_draw_triangle(-150, -250, 0, 250, 150, -250, al_map_rgba_f(0.5, 0, 0.5, 1), Thickness);
       al_draw_rectangle(-300, -200, 300, 200, al_map_rgba_f(0.5, 0, 0, 1), Thickness);
@@ -362,7 +362,7 @@ static void HighPrimitives(Mode: TMODE)
       al_draw_ellipse(0, 0, 300, 150, al_map_rgba_f(0, 0.5, 0.5, 1), Thickness);
       al_draw_arc(0, 0, 200, -ALLEGRO_PI / 2, ALLEGRO_PI, al_map_rgba_f(0.5, 0.25, 0, 1), Thickness);
       al_draw_spline(points, al_map_rgba_f(0.1, 0.2, 0.5, 1), Thickness);
-      
+
       al_use_transform(&Identity);
    }
 }
@@ -370,7 +370,7 @@ static void HighPrimitives(Mode: TMODE)
 static void HighFilledPrimitives(Mode: TMODE)
 {
    if (mode == INIT) {
-   
+
    } else if (mode == LOGIC) {
       Theta += Speed;
       al_build_transform(&MainTrans, ScreenW / 2, ScreenH / 2, 1, 1, Theta);
@@ -379,14 +379,14 @@ static void HighFilledPrimitives(Mode: TMODE)
          al_set_blender(ALLEGRO_ADD, ALLEGRO_ONE, ALLEGRO_ONE);
       else
          al_set_blender(ALLEGRO_ADD, ALLEGRO_ONE, ALLEGRO_ZERO);
-      
+
       al_use_transform(&MainTrans);
-      
+
       al_draw_filled_triangle(-100, -100, -150, 200, 100, 200, al_map_rgb_f(0.5, 0.7, 0.3));
       al_draw_filled_rectangle(20, -50, 200, 50, al_map_rgb_f(0.3, 0.2, 0.6));
       al_draw_filled_ellipse(-250, 0, 100, 150, al_map_rgb_f(0.3, 0.3, 0.3));
       al_draw_filled_rounded_rectangle(50, -250, 350, -75, 50, 70, al_map_rgba_f(0.2, 0.2, 0, 1));
-      
+
       al_use_transform(&Identity);
    }
 }
@@ -395,7 +395,7 @@ static void TransformationsPrimitives(Mode: TMODE)
 {
    float t = al_get_time();
    if (mode == INIT) {
-   
+
    } else if (mode == LOGIC) {
       Theta += Speed;
       al_build_transform(&MainTrans, ScreenW / 2, ScreenH / 2, sinf(t / 5), cosf(t / 5), Theta);
@@ -406,23 +406,23 @@ static void TransformationsPrimitives(Mode: TMODE)
          -700, 200,
          300, -200
       };
-      
+
       if (Blend)
          al_set_blender(ALLEGRO_ADD, ALLEGRO_ONE, ALLEGRO_ONE);
       else
          al_set_blender(ALLEGRO_ADD, ALLEGRO_ONE, ALLEGRO_ZERO);
-      
+
       al_use_transform(&MainTrans);
-      
+
       al_draw_line(-300, -200, 300, 200, al_map_rgba_f(0, 0.5, 0.5, 1), Thickness);
       al_draw_triangle(-150, -250, 0, 250, 150, -250, al_map_rgba_f(0.5, 0, 0.5, 1), Thickness);
       al_draw_rectangle(-300, -200, 300, 200, al_map_rgba_f(0.5, 0, 0, 1), Thickness);
       al_draw_rounded_rectangle(-200, -125, 200, 125, 50, 100, al_map_rgba_f(0.2, 0.2, 0, 1), Thickness);
-      
+
       al_draw_ellipse(0, 0, 300, 150, al_map_rgba_f(0, 0.5, 0.5, 1), Thickness);
       al_draw_arc(0, 0, 200, -ALLEGRO_PI / 2, ALLEGRO_PI, al_map_rgba_f(0.5, 0.25, 0, 1), Thickness);
       al_draw_spline(points, al_map_rgba_f(0.1, 0.2, 0.5, 1), Thickness);
-      
+
       al_use_transform(&Identity);
    }
 }
@@ -438,9 +438,9 @@ static void LowPrimitives(Mode: TMODE)
          float x, y;
          x = 200 * cosf((float)Ndx / 13.0f * 2 * ALLEGRO_PI);
          y = 200 * sinf((float)Ndx / 13.0f * 2 * ALLEGRO_PI);
-         
+
          color = al_map_rgb((Ndx + 1) % 3 * 64, (Ndx + 2) % 3 * 64, (Ndx) % 3 * 64);
-         
+
          vtx[Ndx].x = x; vtx[Ndx].y = y; vtx[Ndx].z = 0;
          vtx2[Ndx].x = 0.1 * x; vtx2[Ndx].y = 0.1 * y;
          vtx[Ndx].color = color;
@@ -454,14 +454,14 @@ static void LowPrimitives(Mode: TMODE)
          al_set_blender(ALLEGRO_ADD, ALLEGRO_ONE, ALLEGRO_ONE);
       else
          al_set_blender(ALLEGRO_ADD, ALLEGRO_ONE, ALLEGRO_ZERO);
-      
+
       al_use_transform(&MainTrans);
-      
+
       al_draw_prim(vtx, 0, 0, 0, 4, ALLEGRO_PRIM_LINE_LIST);
       al_draw_prim(vtx, 0, 0, 4, 9, ALLEGRO_PRIM_LINE_STRIP);
       al_draw_prim(vtx, 0, 0, 9, 13, ALLEGRO_PRIM_LINE_LOOP);
       al_draw_prim(vtx2, 0, 0, 0, 13, ALLEGRO_PRIM_POINT_LIST);
-      
+
       al_use_transform(&Identity);
    }
 }
