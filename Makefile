@@ -1,5 +1,5 @@
-REL_FLAGS = -O3 -Xs- -XX
-DBG_FLAGS = -dDEBUGMODE -g
+REL_FLAGS = -l- -O3 -Xs- -XX
+DBG_FLAGS = -l- -dDEBUGMODE -g
 FLAGS     = $(DBG_FLAGS)
 
 DIRS = -Fulib -FUobj
