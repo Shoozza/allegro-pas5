@@ -75,7 +75,7 @@ BEGIN
   al_set_target_bitmap (Overlay);
   al_identity_transform (Transform);
   al_rotate_transform (Transform, -0.06);
-  al_use_transform ( &transform);
+  al_use_transform ( {$IFDEF FPC}&{$ENDIF}transform);
 
   EndLoop := FALSE;
   REPEAT
