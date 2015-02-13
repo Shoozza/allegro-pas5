@@ -56,6 +56,8 @@ INTERFACE
 
   FUNCTION al_register_font_loader (CONST ext: STRING; load: FONT_LOADER_FUNCTION): AL_BOOL; {$IFDEF FPC}INLINE;{$ENDIF}
   FUNCTION al_load_bitmap_font (CONST filename: STRING): ALLEGRO_FONTptr; {$IFDEF FPC}INLINE;{$ENDIF}
+  FUNCTION al_create_builtin_font: ALLEGRO_FONTptr; CDECL;
+    EXTERNAL ALLEGRO_FONT_LIB_NAME;
   FUNCTION al_load_font (CONST filename: STRING; size, flags: AL_INT): ALLEGRO_FONTptr; {$IFDEF FPC}INLINE;{$ENDIF}
 
   FUNCTION al_grab_font_from_bitmap (bmp: ALLEGRO_BITMAPptr; n: AL_INT; ranges: ARRAY OF AL_INT): ALLEGRO_FONTptr;
