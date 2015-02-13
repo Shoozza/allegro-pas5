@@ -1,7 +1,7 @@
 				Coding Style
 				============
 
-  Here you have some tips about how to write the sources.  The idea is make the
+  Here you have some tips about how to write the sourcecode.  The idea is make the
   code ease to read and maintain.
 
 
@@ -20,8 +20,8 @@ Content
 Comments
 --------
 
-  Sources must include comments.  In most cases, these coments are copyed from
-  Allegro's documentation, but include also any useful information.
+  Sources must include comments.  In most cases, these comments have been
+  copied from Allegro's documentation, but include also additional information.
 
   The comments should be formatted as explained in pasdoc documentation, so
   anybody can create a full documentation using it.

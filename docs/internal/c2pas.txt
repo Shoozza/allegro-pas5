@@ -35,7 +35,7 @@ Allegro's API description
     AL_FUNC (void, al_set_new_bitmap_format, (int format));
     AL_FUNC (int, al_get_new_bitmap_format, (void));
 
-  becames
+  becomes
 
     PROCEDURE al_set_new_bitmap_format (format: LONGINT); CDECL;
     FUNCTION al_get_new_bitmap_format: LONGINT; CDECL;
@@ -46,7 +46,7 @@ Allegro's API description
   Most functions are in dll/so/dylib files so they're external.
 
   Some functions are "inline", and should be "INLINE" in Pascal too.  Also
-  wrapper functions and procedures should bee "INLINE" too.
+  wrapper functions and procedures should be "INLINE" too.
 
 
 
@@ -141,7 +141,7 @@ NOTES
 -----
 
   [1] In C there's no difference between "function" and "procedure"; both are
-      functions.  The difference is that some functions doesn't returns any
+      functions.  The difference is that some functions don't return any
       value (they're of type "void").
 
   [2] http://www.allegro.cc/forums/thread/602423
