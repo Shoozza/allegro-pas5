@@ -67,7 +67,7 @@ INTERFACE
     { @exclude }
     ALLEGRO_TTF_LIB_NAME        = 'liballegro_ttf'+ALLEGRO_LIB_NAME_SUFFIX;
 {$ELSEIF DEFINED(MSWINDOWS)}
-  {$IFDEF MONOLITH}
+  {$IF DEFINED(MONOLITH)}
   {It uses monolith statically linked version. }
     { @exclude }
     ALLEGRO_LIB_NAME            = 'allegro-'+ALLEGRO_VERSION+'-monolith-mt'+_DBG_+'.dll';
@@ -89,6 +89,29 @@ INTERFACE
     ALLEGRO_PRIMITIVES_LIB_NAME = ALLEGRO_LIB_NAME;
     { @exclude }
     ALLEGRO_TTF_LIB_NAME        = ALLEGRO_LIB_NAME;
+  {$ELSEIF DEFINED(MSYS2)}
+    { @exclude }
+    ALLEGRO_LIB_NAME_SUFFIX     =  _DBG_+'-5.0.dll';
+    { @exclude }
+    ALLEGRO_LIB_NAME            = 'allegro'+ALLEGRO_LIB_NAME_SUFFIX;
+    { @exclude }
+    ALLEGRO_ACODEC_LIB_NAME     = 'allegro_acodec'+ALLEGRO_LIB_NAME_SUFFIX;
+    { @exclude }
+    ALLEGRO_AUDIO_LIB_NAME      = 'allegro_audio'+ALLEGRO_LIB_NAME_SUFFIX;
+    { @exclude }
+    ALLEGRO_COLOR_LIB_NAME      = 'allegro_color'+ALLEGRO_LIB_NAME_SUFFIX;
+    { @exclude }
+    ALLEGRO_FONT_LIB_NAME       = 'allegro_font'+ALLEGRO_LIB_NAME_SUFFIX;
+    { @exclude }
+    ALLEGRO_IMAGE_LIB_NAME      = 'allegro_image'+ALLEGRO_LIB_NAME_SUFFIX;
+    { @exclude }
+    ALLEGRO_MAIN_LIB_NAME       = 'allegro_main'+ALLEGRO_LIB_NAME_SUFFIX;
+    { @exclude }
+    ALLEGRO_NATIVE_DLG_LIB_NAME = 'allegro_dialog'+ALLEGRO_LIB_NAME_SUFFIX;
+    { @exclude }
+    ALLEGRO_PRIMITIVES_LIB_NAME = 'allegro_primitives'+ALLEGRO_LIB_NAME_SUFFIX;
+    { @exclude }
+    ALLEGRO_TTF_LIB_NAME        = 'allegro_ttf'+ALLEGRO_LIB_NAME_SUFFIX;
   {$ELSE}
   {It uses add-ons }
     { @exclude }
@@ -113,7 +136,7 @@ INTERFACE
     ALLEGRO_PRIMITIVES_LIB_NAME = 'allegro_primitives-'+ALLEGRO_LIB_NAME_SUFFIX;
     { @exclude }
     ALLEGRO_TTF_LIB_NAME        = 'allegro_primitives-'+ALLEGRO_LIB_NAME_SUFFIX;
-  {$ENDIF}
+  {$IFEND}
 {$IFEND}
 
 
