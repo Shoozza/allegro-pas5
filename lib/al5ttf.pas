@@ -27,7 +27,7 @@ UNIT al5ttf;
 INTERFACE
 
   USES
-    allegro5, al5base;
+    allegro5, al5base, al5font;
 
   CONST
   (* Do not use any kerning even if the font file supports it.
@@ -39,6 +39,15 @@ INTERFACE
   (* Do not use hinging (?).
     @seealso(al_load_font) @seealso(al_load_ttf_font) *)
     ALLEGRO_TTF_NO_AUTOHINT = 4;
+
+  FUNCTION al_load_ttf_font (CONST filename: STRING; size, flags: AL_INT): ALLEGRO_FONTptr; {$IFDEF FPC}INLINE;{$ENDIF}
+  FUNCTION al_load_ttf_font_stretch (CONST filename: STRING; w, h, flags: AL_INT): ALLEGRO_FONTptr; {$IFDEF FPC}INLINE;{$ENDIF}
+
+  (* TODO: These need Allegro's file access.
+
+  FUNCTION al_load_ttf_font_f (file_: ALLEGRO_FILEptr; CONST filename: STRING; size, flags: AL_INT): ALLEGRO_FONTptr; {$IFDEF FPC}INLINE;{$ENDIF}
+  FUNCTION al_load_ttf_font_stretch_f (file_: ALLEGRO_FILEptr; CONST filename: STRING; w, h, flags: AL_INT): ALLEGRO_FONTptr; {$IFDEF FPC}INLINE;{$ENDIF}
+  *)
 
 (* Initializes the TTF addon. *)
   FUNCTION al_init_ttf_addon: AL_BOOL; CDECL;
@@ -54,4 +63,37 @@ INTERFACE
 
 IMPLEMENTATION
 
+  FUNCTION _al_load_ttf_font_ (CONST filename: AL_STRptr; size, flags: AL_INT): ALLEGRO_FONTptr; CDECL;
+  EXTERNAL ALLEGRO_FONT_LIB_NAME NAME 'al_load_ttf_font';
+  FUNCTION al_load_ttf_font (CONST filename: STRING; size, flags: AL_INT): ALLEGRO_FONTptr;
+  BEGIN
+    al_load_ttf_font := _al_load_ttf_font_ (AL_STRptr (filename), size, flags);
+  END;
+
+  {TODO: This needs Allegro's file access.
+
+  FUNCTION _al_load_ttf_font_f_ (CONST filename: AL_STRptr; size, flags: AL_INT): ALLEGRO_FONTptr; CDECL;
+  EXTERNAL ALLEGRO_FONT_LIB_NAME NAME 'al_load_ttf_font_f';
+  FUNCTION al_load_ttf_font_f (file_: ALLEGRO_FILEptr; CONST filename: STRING; size, flags: AL_INT): ALLEGRO_FONTptr;
+  BEGIN
+    al_load_ttf_font_f := _al_load_ttf_font_f_ (AL_FILEptr (file_), AL_STRptr (filename), size, flags);
+  END;
+  }
+
+  FUNCTION _al_load_ttf_font_stretch_ (CONST filename: AL_STRptr; w, h, flags: AL_INT): ALLEGRO_FONTptr; CDECL;
+  EXTERNAL ALLEGRO_FONT_LIB_NAME NAME 'al_load_ttf_font_stretch';
+  FUNCTION al_load_ttf_font_stretch (CONST filename: STRING; w, h, flags: AL_INT): ALLEGRO_FONTptr;
+  BEGIN
+    al_load_ttf_font_stretch := _al_load_ttf_font_stretch_ (AL_STRptr (filename), w, h, flags);
+  END;
+
+  {TODO: This needs Allegro's file access.
+
+  FUNCTION _al_load_ttf_font_stretch_f_ (CONST filename: AL_STRptr; size, flags: AL_INT): ALLEGRO_FONTptr; CDECL;
+  EXTERNAL ALLEGRO_FONT_LIB_NAME NAME 'al_load_ttf_font_stretch_f';
+  FUNCTION al_load_ttf_font_stretch_f (file_: ALLEGRO_FILEptr; CONST filename: STRING; w, h, flags: AL_INT): ALLEGRO_FONTptr;
+  BEGIN
+    al_load_ttf_font_stretch_f := _al_load_ttf_font_stretch_f_ (AL_FILEptr (file_), AL_STRptr (filename), w, h, flags);
+  END;
+  }
 END.
