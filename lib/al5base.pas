@@ -44,6 +44,24 @@ INTERFACE
 {$ENDIF}
 
 {$IF DEFINED(UNIX)}
+    {$IF DEFINED(DARWIN)}
+      { @exclude }
+      ALLEGRO_LIB_NAME_SUFFIX     =  _DBG_+'.5.0';
+      { ALLEGRO_LIB_NAME_SUFFIX     =  _DBG_+'.5.0.dynlib'; }
+      {$linklib allegro}
+      {$linklib allegro_acodec}
+      {$linklib allegro_audio}
+      {$linklib allegro_color}
+      {$linklib allegro_font}
+      {$linklib allegro_image}
+      { $linklib allegro_main}
+      {$linklib allegro_dialog}
+      {$linklib allegro_primitives}
+      {$linklib allegro_ttf}
+    {$ELSE}
+      { @exclude }
+      ALLEGRO_LIB_NAME_SUFFIX     =  _DBG_+'.so.5.0';
+    {$IFEND}
     { @exclude }
     ALLEGRO_LIB_NAME_SUFFIX     =  _DBG_+'.so.5.0';
     { @exclude }
