@@ -66,7 +66,7 @@ INTERFACE
 
 IMPLEMENTATION
 
-  FUNCTION _al_color_name_to_rgb_ (CONST name: AL_STRptr; r, g, b: AL_FLOATptr): AL_BOOL;
+  FUNCTION _al_color_name_to_rgb_ (CONST name: AL_STRptr; r, g, b: AL_FLOATptr): AL_BOOL; CDECL;
     EXTERNAL ALLEGRO_COLOR_LIB_NAME NAME 'al_color_name_to_rgb';
 
   FUNCTION al_color_name_to_rgb (CONST name: STRING; VAR r, g, b: AL_FLOAT): AL_BOOL;
