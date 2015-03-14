@@ -63,8 +63,6 @@ INTERFACE
       ALLEGRO_LIB_NAME_SUFFIX     =  _DBG_+'.so.5.0';
     {$IFEND}
     { @exclude }
-    ALLEGRO_LIB_NAME_SUFFIX     =  _DBG_+'.so.5.0';
-    { @exclude }
     ALLEGRO_LIB_NAME            = 'liballegro'+ALLEGRO_LIB_NAME_SUFFIX;
     { @exclude }
     ALLEGRO_ACODEC_LIB_NAME     = 'liballegro_acodec'+ALLEGRO_LIB_NAME_SUFFIX;
