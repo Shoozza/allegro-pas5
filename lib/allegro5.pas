@@ -724,8 +724,8 @@ BEGIN
 
 { TODO: Some functions need the file.h definitions. }
 
-  FUNCTION al_load_bitmap (CONST filename: STRING): ALLEGRO_BITMAPptr; {$IFDEF FPC}INLINE;{$ENDIF}
-  FUNCTION al_save_bitmap (CONST filename: STRING; bitmap: ALLEGRO_BITMAPptr): AL_BOOL; {$IFDEF FPC}INLINE;{$ENDIF}
+  FUNCTION al_load_bitmap (CONST filename: STRING): ALLEGRO_BITMAPptr; {$IFDEF HAS_INLINE}INLINE;{$ENDIF}
+  FUNCTION al_save_bitmap (CONST filename: STRING; bitmap: ALLEGRO_BITMAPptr): AL_BOOL; {$IFDEF HAS_INLINE}INLINE;{$ENDIF}
 
 
 
@@ -912,7 +912,7 @@ BEGIN
   PROCEDURE al_get_window_position (display: ALLEGRO_DISPLAYptr; VAR x, y: AL_INT); CDECL;
     EXTERNAL ALLEGRO_LIB_NAME;
 
-  PROCEDURE al_set_window_title (display: ALLEGRO_DISPLAYptr; CONST title: STRING); {$IFDEF FPC}INLINE;{$ENDIF}
+  PROCEDURE al_set_window_title (display: ALLEGRO_DISPLAYptr; CONST title: STRING); {$IFDEF HAS_INLINE}INLINE;{$ENDIF}
 
   PROCEDURE al_set_new_display_option (option: ALLEGRO_DISPLAY_OPTIONS; value, importance: AL_INT); CDECL;
     EXTERNAL ALLEGRO_LIB_NAME;
@@ -1168,16 +1168,16 @@ BEGIN
  ***********)
 
 (* Converts microseconds to seconds. *)
-  FUNCTION ALLEGRO_USECS_TO_SECS (x: AL_DOUBLE): AL_DOUBLE; {$IFDEF FPC}INLINE;{$ENDIF}
+  FUNCTION ALLEGRO_USECS_TO_SECS (x: AL_DOUBLE): AL_DOUBLE; {$IFDEF HAS_INLINE}INLINE;{$ENDIF}
 
 (* Converts milliseconds to seconds. *)
-  FUNCTION ALLEGRO_MSECS_TO_SECS (x: AL_DOUBLE): AL_DOUBLE; {$IFDEF FPC}INLINE;{$ENDIF}
+  FUNCTION ALLEGRO_MSECS_TO_SECS (x: AL_DOUBLE): AL_DOUBLE; {$IFDEF HAS_INLINE}INLINE;{$ENDIF}
 
 (* Converts beats per second to seconds. *)
-  FUNCTION ALLEGRO_BPS_TO_SECS (x: AL_DOUBLE): AL_DOUBLE; {$IFDEF FPC}INLINE;{$ENDIF}
+  FUNCTION ALLEGRO_BPS_TO_SECS (x: AL_DOUBLE): AL_DOUBLE; {$IFDEF HAS_INLINE}INLINE;{$ENDIF}
 
 (* Converts beats per minute to seconds. *)
-  FUNCTION ALLEGRO_BPM_TO_SECS (x: AL_DOUBLE): AL_DOUBLE; {$IFDEF FPC}INLINE;{$ENDIF}
+  FUNCTION ALLEGRO_BPM_TO_SECS (x: AL_DOUBLE): AL_DOUBLE; {$IFDEF HAS_INLINE}INLINE;{$ENDIF}
 
   TYPE
     ALLEGRO_TIMERptr = POINTER;
@@ -1268,7 +1268,7 @@ BEGIN
  *  512 <= n < 1024 - reserved user events (for addons)
  * 1024 <= n        - unreserved user events
  *)
-  FUNCTION ALLEGRO_EVENT_TYPE_IS_USER (t: ALLEGRO_EVENT_TYPE): AL_BOOL; {$IFDEF FPC}INLINE;{$ENDIF}
+  FUNCTION ALLEGRO_EVENT_TYPE_IS_USER (t: ALLEGRO_EVENT_TYPE): AL_BOOL; {$IFDEF HAS_INLINE}INLINE;{$ENDIF}
 
 (*
  * Event structures
@@ -1488,7 +1488,7 @@ BEGIN
     ALLEGRO_USTR_INFO = _al_tagbstring;
 
 (* Creating strings *)
-  FUNCTION al_ustr_new (CONST s: STRING): ALLEGRO_USTRptr; {$IFDEF FPC}INLINE;{$ENDIF}
+  FUNCTION al_ustr_new (CONST s: STRING): ALLEGRO_USTRptr; {$IFDEF HAS_INLINE}INLINE;{$ENDIF}
   FUNCTION al_ustr_new_from_buffer (CONST s: AL_STRptr; size: AL_SIZE_T): ALLEGRO_USTRptr; CDECL;
     EXTERNAL ALLEGRO_LIB_NAME;
   PROCEDURE al_ustr_free (us: ALLEGRO_USTRptr); CDECL;
@@ -1507,7 +1507,7 @@ BEGIN
 (* Assign *)
   FUNCTION al_ustr_assign (us1: ALLEGRO_USTRptr; CONST us2: ALLEGRO_USTRptr): AL_BOOL; CDECL;
     EXTERNAL ALLEGRO_LIB_NAME;
-  FUNCTION al_ustr_assign_cstr (us1: ALLEGRO_USTRptr; CONST s: STRING): AL_BOOL; {$IFDEF FPC}INLINE;{$ENDIF}
+  FUNCTION al_ustr_assign_cstr (us1: ALLEGRO_USTRptr; CONST s: STRING): AL_BOOL; {$IFDEF HAS_INLINE}INLINE;{$ENDIF}
 
 (* Compare *)
   FUNCTION al_ustr_equal (CONST us1, us2: ALLEGRO_USTRptr): AL_BOOL; CDECL;

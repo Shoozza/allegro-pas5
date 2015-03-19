@@ -40,13 +40,13 @@ INTERFACE
     @seealso(al_load_font) @seealso(al_load_ttf_font) *)
     ALLEGRO_TTF_NO_AUTOHINT = 4;
 
-  FUNCTION al_load_ttf_font (CONST filename: STRING; size, flags: AL_INT): ALLEGRO_FONTptr; {$IFDEF FPC}INLINE;{$ENDIF}
-  FUNCTION al_load_ttf_font_stretch (CONST filename: STRING; w, h, flags: AL_INT): ALLEGRO_FONTptr; {$IFDEF FPC}INLINE;{$ENDIF}
+  FUNCTION al_load_ttf_font (CONST filename: STRING; size, flags: AL_INT): ALLEGRO_FONTptr; {$IFDEF HAS_INLINE}INLINE;{$ENDIF}
+  FUNCTION al_load_ttf_font_stretch (CONST filename: STRING; w, h, flags: AL_INT): ALLEGRO_FONTptr; {$IFDEF HAS_INLINE}INLINE;{$ENDIF}
 
   (* TODO: These need Allegro's file access.
 
-  FUNCTION al_load_ttf_font_f (file_: ALLEGRO_FILEptr; CONST filename: STRING; size, flags: AL_INT): ALLEGRO_FONTptr; {$IFDEF FPC}INLINE;{$ENDIF}
-  FUNCTION al_load_ttf_font_stretch_f (file_: ALLEGRO_FILEptr; CONST filename: STRING; w, h, flags: AL_INT): ALLEGRO_FONTptr; {$IFDEF FPC}INLINE;{$ENDIF}
+  FUNCTION al_load_ttf_font_f (file_: ALLEGRO_FILEptr; CONST filename: STRING; size, flags: AL_INT): ALLEGRO_FONTptr; {$IFDEF HAS_INLINE}INLINE;{$ENDIF}
+  FUNCTION al_load_ttf_font_stretch_f (file_: ALLEGRO_FILEptr; CONST filename: STRING; w, h, flags: AL_INT): ALLEGRO_FONTptr; {$IFDEF HAS_INLINE}INLINE;{$ENDIF}
   *)
 
 (* Initializes the TTF addon. *)

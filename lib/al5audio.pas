@@ -384,9 +384,9 @@ INTERFACE
     EXTERNAL ALLEGRO_AUDIO_LIB_NAME;
 
 (* File type handlers *)
-  FUNCTION al_register_sample_loader (CONST ext: STRING; loader: ALLEGRO_SAMPLE_LOADER): AL_BOOL; {$IFDEF FPC}INLINE;{$ENDIF}
-  FUNCTION al_register_sample_saver (CONST ext: STRING; saver: ALLEGRO_SAMPLE_SAVER): AL_BOOL; {$IFDEF FPC}INLINE;{$ENDIF}
-  FUNCTION al_register_audio_stream_loader (CONST ext: STRING; stream_loader: ALLEGRO_AUDIO_STREAM_LOADER): AL_BOOL; {$IFDEF FPC}INLINE;{$ENDIF}
+  FUNCTION al_register_sample_loader (CONST ext: STRING; loader: ALLEGRO_SAMPLE_LOADER): AL_BOOL; {$IFDEF HAS_INLINE}INLINE;{$ENDIF}
+  FUNCTION al_register_sample_saver (CONST ext: STRING; saver: ALLEGRO_SAMPLE_SAVER): AL_BOOL; {$IFDEF HAS_INLINE}INLINE;{$ENDIF}
+  FUNCTION al_register_audio_stream_loader (CONST ext: STRING; stream_loader: ALLEGRO_AUDIO_STREAM_LOADER): AL_BOOL; {$IFDEF HAS_INLINE}INLINE;{$ENDIF}
 
   {TODO: These needs Allegro's file access.
 
@@ -399,9 +399,9 @@ ALLEGRO_KCM_AUDIO_FUNC(bool, al_register_audio_stream_loader_f, (const char *ext
 	    size_t buffer_count, unsigned int samples)));
 	  }
 
-  FUNCTION al_load_sample (CONST filename: STRING): ALLEGRO_SAMPLEptr; {$IFDEF FPC}INLINE;{$ENDIF}
-  FUNCTION al_save_sample (CONST filename: STRING; spl: ALLEGRO_SAMPLEptr): AL_BOOL; {$IFDEF FPC}INLINE;{$ENDIF}
-  FUNCTION al_load_audio_stream (CONST filename: STRING; buffer_count: AL_SIZE_T; samples: AL_UINT): ALLEGRO_AUDIO_STREAMptr; {$IFDEF FPC}INLINE;{$ENDIF}
+  FUNCTION al_load_sample (CONST filename: STRING): ALLEGRO_SAMPLEptr; {$IFDEF HAS_INLINE}INLINE;{$ENDIF}
+  FUNCTION al_save_sample (CONST filename: STRING; spl: ALLEGRO_SAMPLEptr): AL_BOOL; {$IFDEF HAS_INLINE}INLINE;{$ENDIF}
+  FUNCTION al_load_audio_stream (CONST filename: STRING; buffer_count: AL_SIZE_T; samples: AL_UINT): ALLEGRO_AUDIO_STREAMptr; {$IFDEF HAS_INLINE}INLINE;{$ENDIF}
 
   {TODO: These needs Allegro's file access.
 

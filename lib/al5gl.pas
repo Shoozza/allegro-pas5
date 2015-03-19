@@ -55,8 +55,8 @@ INTERFACE
 
   FUNCTION al_get_opengl_version: AL_UINT32; CDECL;
     EXTERNAL ALLEGRO_LIB_NAME;
-  FUNCTION al_have_opengl_extension (CONST extension: STRING): AL_BOOL; {$IFDEF FPC}INLINE;{$ENDIF}
-  FUNCTION al_get_opengl_proc_address (CONST name: STRING): AL_VOIDptr; {$IFDEF FPC}INLINE;{$ENDIF}
+  FUNCTION al_have_opengl_extension (CONST extension: STRING): AL_BOOL; {$IFDEF HAS_INLINE}INLINE;{$ENDIF}
+  FUNCTION al_get_opengl_proc_address (CONST name: STRING): AL_VOIDptr; {$IFDEF HAS_INLINE}INLINE;{$ENDIF}
   FUNCTION al_get_opengl_texture (bitmap: ALLEGRO_BITMAPptr): GLuint; CDECL;
     EXTERNAL ALLEGRO_LIB_NAME;
   PROCEDURE al_remove_opengl_fbo (bitmap: ALLEGRO_BITMAPptr); CDECL;
