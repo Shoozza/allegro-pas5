@@ -54,7 +54,7 @@ INTERFACE
       {$linklib allegro_color}
       {$linklib allegro_font}
       {$linklib allegro_image}
-      { $linklib allegro_main}
+      {$linklib allegro_main}
       {$linklib allegro_dialog}
       {$linklib allegro_primitives}
       {$linklib allegro_ttf}
