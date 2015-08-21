@@ -60,28 +60,28 @@ Data types
   conversions.  By default, C compilers don't activate these exceptions.  That
   results in some issues as discused in an Allegro.cc forum thread[2].
 
-  Pointers in C are marked by "*".  "*char" are a pointer to char, but they
-  actually use it as ANSISTRINGS.  I think it's better to use "PCHAR" and
-  create inlined wrappers for parameters and function returning.  By the way
-  I've defined type AL_STRptr for that cases.
+  Pointers in C are marked by "*".  "char*" are a pointer to char, but they
+  actually use it as ANSISTRINGS.  It is preferable to use "PCHAR" and
+  create inlined wrappers for parameters and function returning.  Note
+  AL_STRptr was defined for such cases.
 
   C doesn't distiguish between array and pointers.  Actually an array is a
   pointer that points to a "non dynamic" memory space.
 
-  "bool" is the bad guy here.  It's a recent addition to the C language
+  "bool" can be problematic.  It's a recent addition to the C language
   (1999 IIRC) and not all compilers support it.  Allegro's defines it as
   "unsigned char" if compiler doesn't supports it.
 
   Enumerations are discussed in next section.
 
-  Here you have a list of data types.  First column are C types, second are
+  The folloing list shows data types.  First column are C types, second are
   Pascal types.
 
-  bool			BYTEBOOL[3]
+  bool			BYTEBOOL [3]
 
   char			CHAR or SHORTINT (depending the use).
   unsigned char		BYTE
-  *char			PCHAR or ANSISTRING
+  char*			PCHAR or ANSISTRING
 
   int			LONGINT
   long int		LONGINT or INT64
@@ -94,19 +94,20 @@ Data types
   double		DOUBLE
 
 
-  Anyway, unit al5base defines some types to make it easer.  For example, C
-  type "int" is "AL_INT", "unsigned int" is "AL_UINT", etcetera.
+  Unit al5base defines some types to make converting easer.  For example, C
+  type "int" is "AL_INT", "unsigned int" is "AL_UINT", etc.
+
 
 
 Enumerations
 ------------
 
-  Enumerations are another "bad guy".  In C There are almost no differences
+  Enumerations are another problem.  In C There are almost no differences
   between "enum" and "int".  Actually, Allegro 5 doesn't use enums as function
-  parameter, it uses "int".  I think we should use enumerations.
+  parameter, it uses "int".  We however should use enumerations.
 
-  Free Pascal and Delphi optimizes enumerations.  Both have modifiers that
-  modifies that.  AFAIK C enums are 4 bytes wide.
+  Free Pascal and Delphi optimizes enumerations.  Both have modifiers with
+  modify that.  AFAIK C enums are 4 bytes wide.
 
 
 
