@@ -6,10 +6,9 @@
    \ \_\ \_\/\____\/\____\ \____\ \____ \ \_\\ \____/\_\ \  __//\____/\/\____/
     \/_/\/_/\/____/\/____/\/____/\/___L\ \/_/ \/___/\/_/\ \ \/ \/___/  \/___/
                                    /\____/               \ \_\
-     Version 5.0.alpha 1           \/___/                 \/_/
+     Version 5.0.alpha 2           \/___/                 \/_/
 
-  A wrapper to use the Allegro library with Pascal compilers
-  by Ñuño Martínez, April 24, 2013.
+  A wrapper to use the Allegro library with Pascal compilers.
 
 
 
@@ -29,8 +28,8 @@ Contents
 Introduction
 ============
 
-  Allegro.pas is a wrapper to allow Pascal compilers (such as Free Pascal)
-  to use the Allegro library.
+  Allegro.pas is a wrapper to allow Pascal compilers (such as Free Pascal or
+  Delphi) to use the Allegro library.
 
   Note that Allegro 5 is wholly *incompatible* with Allegro 4 and earlier
   versions, and so is Allegro.pas, but both may be installed at the same time
@@ -42,14 +41,11 @@ Introduction
   is the latest stable version released.  Please go to the Allegro.pas' project
   site at sourceforge for more information.
 
-  Current version was tested only on GNU/Linux + Free Pascal.  An earlier SVN
-  version was tested while development by a volunteer in Windows + Delphi but I
-  can't grant it will work.  Other operanting systems and compilers weren't
-  tested.
+  Current version was tested only on GNU/Linux, OS X and Windows with Free Pascal
+  and also on Windows with Delphi 7.
 
   The goal is to make Allegro.pas 5 compatible with any operating system
-  supported by Allegro, which are Windows, Linux, MacOS and iOS.  AFAIK all
-  these OS have Pascal compilers.
+  supported by Allegro, which are Windows, Linux, MacOS, iOS and Android.
 
   As this is a WIP alpha version, you should remember that at the moment not
   all functionality are implemented.
@@ -96,11 +92,13 @@ Unimplemented
   You can read more about this at the "docs/internal" subdirectory.
 
 
+
 =======
 License
 =======
 
   Allegro.pas is released under zlib/png license.  Read it in file LICENSE.
+  Authors are listed in the AUTHORS file.
 
 
 
@@ -130,19 +128,5 @@ Documentation
   At the moment the public documentation isn't complete.  Since symbols have
   same name than the C version you can use the original Allegro documentation.
 
-  BTW I've put some information at the docs/internal subdirectory.  Read it
+  I've put some information at the docs/internal subdirectory.  Read it
   specially if you're planning to write or hack your own test programs.
-
-
-
-============
-Contact info
-============
-
-  You can contact me at http://allegro-pas.sourceforge.net.  There
-  are forums and a mailing-list you can use.  Also I visit quite often the
-  next forums:
-
-  Pascal Game Development - http://www.pascalgamedevelopment.com/
-  Club Delphi - http://www.clubdelphi.com/
-  Hispalazarus - http://hispalazarus.forogratis.es/
