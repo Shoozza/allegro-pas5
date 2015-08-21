@@ -21,3 +21,9 @@ In no special order
     Windows (?)).
 
   * MUST normalize types (VAR vs. POINTER, OUT vs. VAR, STRING vs. PCHAR ...).
+
+  * Implement Allegro 5.1 features
+
+  * Implement missing OS X platform specific functions
+
+  * Document missing functions for Allegro 5.0.x
