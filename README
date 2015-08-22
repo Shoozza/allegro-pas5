@@ -37,9 +37,6 @@ Introduction
 
   This is a WIP (alpha) version of the Allegro.pas 5 version.  It is released
   to show what's done and to allow developers to test it and give feed back.
-  DON'T USE IT FOR FINAL USE, in this case use Allegro.pas 4.4 version, which
-  is the latest stable version released.  Please go to the Allegro.pas' project
-  site at sourceforge for more information.
 
   Current version was tested only on GNU/Linux, OS X and Windows with Free Pascal
   and also on Windows with Delphi 7.
@@ -47,8 +44,7 @@ Introduction
   The goal is to make Allegro.pas 5 compatible with any operating system
   supported by Allegro, which are Windows, Linux, MacOS, iOS and Android.
 
-  As this is a WIP alpha version, you should remember that at the moment not
-  all functionality are implemented.
+  As this is a WIP alpha version, there is some missing functionality.
 
 Implemented
 -----------
@@ -97,8 +93,8 @@ Unimplemented
 License
 =======
 
-  Allegro.pas is released under zlib/png license.  Read it in file LICENSE.
-  Authors are listed in the AUTHORS file.
+  Allegro.pas is released under zlib/png license. See the LICENSE file for
+  details. Authors are listed in the AUTHORS file.
 
 
 
