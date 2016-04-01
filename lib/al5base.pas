@@ -34,7 +34,7 @@ INTERFACE
   (* Defines some constants with the names of the library files. *)
   CONST
     { Used only for Windows builds }
-    ALLEGRO_VERSION = '5.0.11';
+    ALLEGRO_VERSION = '5.2.0';
 {$IFDEF DEBUGMODE}
     { @exclude }
     _DBG_ = '-debug';
@@ -46,7 +46,7 @@ INTERFACE
 {$IF DEFINED(UNIX)}
     {$IF DEFINED(DARWIN)}
       { @exclude }
-      ALLEGRO_LIB_NAME_SUFFIX     =  _DBG_+'.5.0';
+      ALLEGRO_LIB_NAME_SUFFIX     =  _DBG_+'.5.2';
       { ALLEGRO_LIB_NAME_SUFFIX     =  _DBG_+'.5.0.dynlib'; }
       {$linklib allegro}
       {$linklib allegro_acodec}
@@ -60,7 +60,7 @@ INTERFACE
       {$linklib allegro_ttf}
     {$ELSE}
       { @exclude }
-      ALLEGRO_LIB_NAME_SUFFIX     =  _DBG_+'.so.5.0';
+      ALLEGRO_LIB_NAME_SUFFIX     =  _DBG_+'.so.5.2';
     {$IFEND}
     { @exclude }
     ALLEGRO_LIB_NAME            = 'liballegro'+ALLEGRO_LIB_NAME_SUFFIX;
@@ -107,7 +107,7 @@ INTERFACE
     ALLEGRO_TTF_LIB_NAME        = ALLEGRO_LIB_NAME;
   {$ELSEIF DEFINED(MSYS2)}
     { @exclude }
-    ALLEGRO_LIB_NAME_SUFFIX     =  _DBG_+'-5.0.dll';
+    ALLEGRO_LIB_NAME_SUFFIX     =  _DBG_+'-5.2.dll';
     { @exclude }
     ALLEGRO_LIB_NAME            = 'allegro'+ALLEGRO_LIB_NAME_SUFFIX;
     { @exclude }
