@@ -21,9 +21,9 @@ INTERFACE
   (* Major version of Allegro. *)
     ALLEGRO_VERSION      =   5;
   (* Minor version of Allegro. *)
-    ALLEGRO_SUB_VERSION  =   0;
+    ALLEGRO_SUB_VERSION  =   2;
   (* Revision number of Allegro. *)
-    ALLEGRO_WIP_VERSION  =   11;
+    ALLEGRO_WIP_VERSION  =   0;
   (* Not sure we need it, but since ALLEGRO_VERSION_STR contains it:
      0 = SVN
      1 = first release
