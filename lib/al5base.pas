@@ -34,7 +34,7 @@ INTERFACE
   (* Defines some constants with the names of the library files. *)
   CONST
     { Used only for Windows builds }
-    ALLEGRO_VERSION = '5.2.0';
+    ALLEGRO_VERSION = '5.2';
 {$IFDEF DEBUGMODE}
     { @exclude }
     _DBG_ = '-debug';
