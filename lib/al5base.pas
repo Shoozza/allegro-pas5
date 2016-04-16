@@ -86,7 +86,7 @@ INTERFACE
   {$IF DEFINED(MONOLITH)}
   {It uses monolith statically linked version. }
     { @exclude }
-    ALLEGRO_LIB_NAME            = 'allegro-'+ALLEGRO_VERSION+'-monolith-mt'+_DBG_+'.dll';
+    ALLEGRO_LIB_NAME            = 'allegro_monolith-'+ALLEGRO_VERSION+'.dll';
     { @exclude }
     ALLEGRO_ACODEC_LIB_NAME     = ALLEGRO_LIB_NAME;
     { @exclude }
