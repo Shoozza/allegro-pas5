@@ -21,9 +21,9 @@ INTERFACE
   (* Major version of Allegro. *)
     ALLEGRO_VERSION      =   5;
   (* Minor version of Allegro. *)
-    ALLEGRO_SUB_VERSION  =   0;
+    ALLEGRO_SUB_VERSION  =   2;
   (* Revision number of Allegro. *)
-    ALLEGRO_WIP_VERSION  =   11;
+    ALLEGRO_WIP_VERSION  =   0;
   (* Not sure we need it, but since ALLEGRO_VERSION_STR contains it:
      0 = SVN
      1 = first release
@@ -1407,6 +1407,8 @@ BEGIN
     EXTERNAL ALLEGRO_LIB_NAME;
   FUNCTION al_is_event_queue_empty (queue: ALLEGRO_EVENT_QUEUEptr): AL_BOOL; CDECL;
     EXTERNAL ALLEGRO_LIB_NAME;
+  FUNCTION al_pause_event_queue (queue: ALLEGRO_EVENT_QUEUEptr; pause: AL_BOOL): AL_BOOL; CDECL;
+    EXTERNAL ALLEGRO_LIB_NAME;    
   FUNCTION al_get_next_event (queue: ALLEGRO_EVENT_QUEUEptr; OUT event: ALLEGRO_EVENT): AL_BOOL; CDECL;
     EXTERNAL ALLEGRO_LIB_NAME;
   FUNCTION al_peek_next_event (queue: ALLEGRO_EVENT_QUEUEptr; OUT event: ALLEGRO_EVENT): AL_BOOL; CDECL;
