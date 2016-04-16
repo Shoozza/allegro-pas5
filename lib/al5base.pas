@@ -131,7 +131,7 @@ INTERFACE
   {$ELSE}
   {It uses add-ons }
     { @exclude }
-    ALLEGRO_LIB_NAME_SUFFIX     = ALLEGRO_VERSION+'-mt'+_DBG_+'.dll';
+    ALLEGRO_LIB_NAME_SUFFIX     = ALLEGRO_VERSION+_DBG_+'.dll';
     { @exclude }
     ALLEGRO_LIB_NAME            = 'allegro-'+ALLEGRO_LIB_NAME_SUFFIX;
     { @exclude }
