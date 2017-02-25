@@ -1,12 +1,12 @@
- ______   ___    ___
-/\  _  \ /\_ \  /\_ \
-\ \ \L\ \\//\ \ \//\ \      __     __   _  __  ___        __    ___      ____
- \ \  __ \ \ \ \  \ \ \   /'__`\ /'_ `\/\`'__\/ __`\    /'__`\ /\__`\  /'___/
-  \ \ \/\ \ \_\ \_ \_\ \_/\  __//\ \L\ \ \ \//\ \L\ \__/\ \L\ \\/ __ \/\____`\
-   \ \_\ \_\/\____\/\____\ \____\ \____ \ \_\\ \____/\_\ \  __//\____/\/\____/
-    \/_/\/_/\/____/\/____/\/____/\/___L\ \/_/ \/___/\/_/\ \ \/ \/___/  \/___/
+ ______   ___    ___                                                          ______
+/\  _  \ /\_ \  /\_ \                                                        /\  ___\
+\ \ \_\ \\//\ \ \//\ \      __     __   _  __  ___        __    ___      ____\ \ \__/
+ \ \  __ \ \ \ \  \ \ \   /'__`\ /'_ `\/\`'__\/ __`\    /'__`\ /\__`\  /'___/ \ \___``\
+  \ \ \/\ \ \_\ \_ \_\ \_/\  __//\ \_\ \ \ \//\ \_\ \__/\ \_\ \\/ __ \/\____`\ \/\ \_\ \
+   \ \_\ \_\/\____\/\____\ \____\ \____ \ \_\\ \____/\_\ \  __//\____/\/\____/  \ \____/
+    \/_/\/_/\/____/\/____/\/____/\/___/\ \/_/ \/___/\/_/\ \ \/ \/___/  \/___/    \/___/
                                    /\____/               \ \_\
-     Version 5.0.alpha 2           \/___/                 \/_/
+     Version 5.2.alpha 2           \/___/                 \/_/
 
   A wrapper to use the Allegro library with Pascal compilers.
 
@@ -28,21 +28,17 @@ Contents
 Introduction
 ============
 
-  Allegro.pas is a wrapper to allow Pascal compilers (such as Free Pascal or
+  Allegro.pas5 is a wrapper to allow Pascal compilers (such as Free Pascal or
   Delphi) to use the Allegro library.
 
-  Note that Allegro 5 is wholly *incompatible* with Allegro 4 and earlier
-  versions, and so is Allegro.pas, but both may be installed at the same time
-  without conflicts.
-
-  This is a WIP (alpha) version of the Allegro.pas 5 version.  It is released
-  to show what's done and to allow developers to test it and give feed back.
+  This is a WIP (alpha) version for the Allegro 5 version. It is released
+  to show what's done and to allow developers to test it and give feedback.
 
   Current version was tested only on GNU/Linux, OS X and Windows with Free Pascal
   and also on Windows with Delphi 7.
 
-  The goal is to make Allegro.pas 5 compatible with any operating system
-  supported by Allegro, which are Windows, Linux, MacOS, iOS and Android.
+  The goal is to make Allegro.pas5 compatible with any operating system
+  supported by Allegro, which are Windows, Linux, OS X, iOS and Android.
 
   As this is a WIP alpha version, there is some missing functionality.
 
@@ -93,7 +89,7 @@ Unimplemented
 License
 =======
 
-  Allegro.pas is released under zlib/png license. See the LICENSE file for
+  Allegro.pas5 is released under zlib/png license. See the LICENSE file for
   details. Authors are listed in the AUTHORS file.
 
 
@@ -102,10 +98,10 @@ License
 Installation
 ============
 
-  First you must install Allegro itself.  Current Allegro.pas version is
-  compatible with version 5.0.x only so DON'T install version 5.1.x.  Visit
-  Allegro's project website at http://alleg.sf.net/ to download it.  The
-  package includes installation instructions.
+  First you must install Allegro itself.  Current Allegro.pas5 version is
+  compatible with version 5.2.x of Allegro. Visit Allegro's project website at
+  http://alleg.sf.net/ to download it. The package includes installation
+  instructions.
 
   Then you need a Pascal compiler.  At the moment only Free Pascal and Delphi
   were tested but may be other compilers (such as GNU/Pascal) can be used too.
